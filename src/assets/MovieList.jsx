@@ -1,6 +1,8 @@
 import React from "react";
 
-const MovieList = ({ movies, onEdit, onDelete }) => {
+const MovieList = ({ movies = [], onEdit, onDelete }) => {
+  if (!Array.isArray(movies)) return <p>No movies to display.</p>;
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4">
       {movies.map((movie) => (
@@ -16,7 +18,7 @@ const MovieList = ({ movies, onEdit, onDelete }) => {
           <div className="p-4">
             <h3 className="text-xl font-semibold mb-2">{movie.name}</h3>
             <p className="text-gray-600 mb-4">
-              {movie.year} | {movie.genre} | Rating: {movie.rating}
+              {movie.year} | {movie.genere} | Rating: {movie.rating}
             </p>
             <div className="flex justify-between">
               <button
