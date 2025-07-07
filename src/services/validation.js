@@ -8,4 +8,4 @@ const schema= yup.object().shape({
     rating:yup.number().typeError("Invalid rating").min(0,"Minimum Rating is 0").max(100,"Maximum rating is 100"),
     poster:yup.string().required("Poster URL is required"),
 });
-export default schema
+export default schema           
