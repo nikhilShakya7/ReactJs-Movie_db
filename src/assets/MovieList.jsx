@@ -17,7 +17,7 @@ const MovieList = ({ movies = [], onEdit, onDelete }) => {
           />
           <div className="p-4">
             <h3 className="text-xl font-semibold mb-2">{movie.name}</h3>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 mb-4 ">
               {movie.year} | {movie.genere} | Rating: {movie.rating}
             </p>
             <div className="flex justify-between">
